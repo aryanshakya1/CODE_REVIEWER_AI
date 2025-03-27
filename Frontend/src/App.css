@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+}
+
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+main .left,
+main .right {
+  flex: 1;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+main .left {
+  background-color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  flex: 1;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: #ffffff;
+  padding: 1rem;
+  overflow: auto;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(173, 173, 178);
+  color: #000;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+main .left .review:hover {
+  background-color: rgb(190, 190, 200);
+  transform: scale(1.05);
+}
+
+main .right {
+  background-color: #343434;
+  padding: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  color: #ffffff;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+main .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+main .right::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+main .right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main .right {
+  background: linear-gradient(135deg, rgba(52, 52, 52, 0.8), rgba(66, 66, 66, 0.9));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 1.5rem 1.5rem 2rem; /* Increased left padding */
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  color: #ffffff;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+main .right::-webkit-scrollbar {
+  width: 8px;
+}
+
+main .right::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(200, 200, 200, 0.2));
+  border-radius: 4px;
+}
+
+main .right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
